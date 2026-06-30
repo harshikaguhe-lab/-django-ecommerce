@@ -1,0 +1,33 @@
+<h1>Your Cart 🛒</h1>
+
+{% if products %}
+
+    {% for product in products %}
+        <h3>{{ product.name }}</h3>
+
+        <p>Price: ₹{{ product.price }}</p>
+        <p>Qty: {{ product.qty }}</p>
+        <p>Total: ₹{{ product.total_price }}</p>
+
+        <a href="/store/remove-from-cart/{{ product.id }}/">
+            <button>Remove</button>
+        </a>
+
+        <hr>
+    {% endfor %}
+
+    <h2>Grand Total: ₹{{ total }}</h2>
+
+    <a href="/store/checkout/">
+        <button>Proceed to Checkout</button>
+    </a>
+
+{% else %}
+    <h2>Your cart is empty 🥲</h2>
+{% endif %}
+
+<br><br>
+
+<a href="/store/">
+    ⬅ Continue Shopping
+</a>
