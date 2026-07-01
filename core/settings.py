@@ -1,22 +1,15 @@
 from pathlib import Path
 
-# Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key safe in production!
 SECRET_KEY = 'django-insecure-change-this-to-any-random-string'
 
-# DEBUG (PythonAnywhere pe True theek hai for now)
-DEBUG = True
+# ⚠️ Render ke liye MUST be False
+DEBUG = False
 
-# Allowed hosts (VERY IMPORTANT for live site)
-ALLOWED_HOSTS = [
-    "django-ecommerce-4n0m.onrender.com",
-    "localhost",
-    "127.0.0.1"
-]
+# ✅ IMPORTANT FIX (Render deploy)
+ALLOWED_HOSTS = ["*"]
 
-# Installed apps
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -25,10 +18,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'store',  # ✔ your app (IMPORTANT)
+    'store',
 ]
 
-# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -39,14 +31,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# Root URL config
 ROOT_URLCONF = 'core.urls'
 
-# Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # ✔ important
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -59,10 +49,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# Database (default SQLite)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -70,17 +58,13 @@ DATABASES = {
     }
 }
 
-# Password validation (skip for now)
 AUTH_PASSWORD_VALIDATORS = []
 
-# Language & timezone
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
 STATIC_URL = '/static/'
 
-# Default auto field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
