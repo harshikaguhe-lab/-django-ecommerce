@@ -11,9 +11,9 @@ DEBUG = True
 
 # Allowed hosts (VERY IMPORTANT for live site)
 ALLOWED_HOSTS = [
-    'harshikaguhe123.pythonanywhere.com',
-    'localhost',
-    '127.0.0.1'
+    "django-ecommerce-4n0m.onrender.com",
+    "localhost",
+    "127.0.0.1"
 ]
 
 # Installed apps
