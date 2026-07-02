@@ -1,74 +1,470 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Ecommerce Store</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earbuds Store</title>
 
-        header {
-            background-color: black;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-        }
+    <link rel="stylesheet" href="{% static 'store/style.css' %}">
 
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .product {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #ccc;
-        }
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        .btn {
-            background-color: green;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background-color: darkgreen;
-        }
-    </style>
 </head>
-
 <body>
 
-<header>
-    🛍 My Ecommerce Website
-</header>
+<!-- NAVBAR START -->
 
-<div class="container">
+<nav class="navbar">
 
-    <div class="product">
-        <h2>Product 1</h2>
-        <p>₹499</p>
-        <button class="btn">Buy Now</button>
+    <div class="logo">
+        🎧 EarbudsHub
     </div>
 
-    <div class="product">
-        <h2>Product 2</h2>
-        <p>₹999</p>
-        <button class="btn">Buy Now</button>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search Earbuds...">
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
     </div>
+
+    <div class="icons">
+
+        <i class="fa-regular fa-heart"></i>
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <i class="fa-regular fa-user"></i>
+
+    </div>
+
+</nav>
+
+<!-- NAVBAR END -->
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Premium Wireless<br>
+
+Earbuds Collection
+
+</h1>
+
+<p>
+
+Experience crystal clear sound,
+deep bass and premium quality
+at the best price.
+
+</p>
+
+<a href="#" class="shop-btn">
+
+Shop Now
+
+</a>
 
 </div>
+
+
+<div class="hero-right">
+
+<img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800"
+alt="Earbuds">
+
+</div>
+
+</section>
+
+
+<!-- CATEGORY -->
+
+<section class="category">
+
+<h2>
+
+Shop By Brand
+
+</h2>
+
+<div class="category-box">
+
+<div class="brand">
+
+Sony
+
+</div>
+
+<div class="brand">
+
+boAt
+
+</div>
+
+<div class="brand">
+
+JBL
+
+</div>
+
+<div class="brand">
+
+Noise
+
+</div>
+
+<div class="brand">
+
+Boult
+
+</div>
+
+<div class="brand">
+
+Realme
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<h2>
+
+Featured Products
+
+</h2>
+
+<div class="product-container">
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500">
+
+<h3>
+
+Sony WF C500
+
+</h3>
+
+<div class="price">
+
+₹2999
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500">
+
+<h3>
+
+boAt Airdopes
+
+</h3>
+
+<div class="price">
+
+₹1999
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500">
+
+<h3>
+
+JBL Tune Buds
+
+</h3>
+
+<div class="price">
+
+₹2499
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1608156639585-b3a032ef9689?w=500">
+
+<h3>
+
+Noise Buds VS104
+
+</h3>
+
+<div class="price">
+
+₹1799
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500">
+
+<h3>
+
+Boult Z40
+
+</h3>
+
+<div class="price">
+
+₹1599
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=500">
+
+<h3>
+
+Realme Buds Air
+
+</h3>
+
+<div class="price">
+
+₹2799
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=500">
+
+<h3>
+
+Apple AirPods Pro
+
+</h3>
+
+<div class="price">
+
+₹19999
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=500">
+
+<h3>
+
+OnePlus Buds 3
+
+</h3>
+
+<div class="price">
+
+₹5499
+
+</div>
+
+<button>
+
+Add To Cart
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="offer">
+
+<div class="offer-content">
+
+<h2>
+
+🔥 Mega Sale
+
+</h2>
+
+<p>
+
+Up to 60% OFF on Premium Wireless Earbuds
+
+</p>
+
+<a href="#">
+
+Shop Deals
+
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-container">
+
+<div>
+
+<h3>
+
+EarbudsHub
+
+</h3>
+
+<p>
+
+Premium Audio Experience.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li>Home</li>
+
+<li>Products</li>
+
+<li>Offers</li>
+
+<li>Contact</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+
+Follow Us
+
+</h3>
+
+<div class="social">
+
+<i class="fab fa-facebook"></i>
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-twitter"></i>
+
+<i class="fab fa-youtube"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="copyright">
+
+© 2026 EarbudsHub | All Rights Reserved
+
+</p>
+
+</footer>
 
 </body>
 </html>
