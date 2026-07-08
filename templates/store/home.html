@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EarbudsHub</title>
+    <title>EarbudsHubs</title>
 
     <link rel="stylesheet" href="{% static 'store/style.css' %}">
 
@@ -112,70 +112,39 @@
 
 <!-- ================= PRODUCTS START ================= -->
 
+<!-- ================= PRODUCTS START ================= -->
+
 <section class="products">
 
-    <h2>
-        Featured Products
-    </h2>
+    <h2>Featured Products</h2>
 
     <div class="product-container">
+
+        {% for product in products %}
+
         <div class="card">
-    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500" alt="Sony WF C500">
-    <h3>Sony WF C500</h3>
-    <div class="price">₹2999</div>
-    <button>Add To Cart</button>
-</div>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500" alt="boAt Airdopes">
-    <h3>boAt Airdopes</h3>
-    <div class="price">₹1999</div>
-    <button>Add To Cart</button>
-</div>
+            <img src="{{ product.image }}" alt="{{ product.name }}">
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="JBL Tune Buds">
-    <h3>JBL Tune Buds</h3>
-    <div class="price">₹2499</div>
-    <button>Add To Cart</button>
-</div>
+            <h3>{{ product.name }}</h3>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1608156639585-b3a032ef9689?w=500" alt="Noise Buds">
-    <h3>Noise Buds VS104</h3>
-    <div class="price">₹1799</div>
-    <button>Add To Cart</button>
-</div>
+            <p>{{ product.description }}</p>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500" alt="Boult Z40">
-    <h3>Boult Z40</h3>
-    <div class="price">₹1599</div>
-    <button>Add To Cart</button>
-</div>
+            <div class="price">₹{{ product.price }}</div>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=500" alt="Realme Buds Air">
-    <h3>Realme Buds Air</h3>
-    <div class="price">₹2799</div>
-    <button>Add To Cart</button>
-</div>
+            <a href="{% url 'add_to_cart' product.id %}">
+                <button type="button">Add To Cart</button>
+            </a>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=500" alt="Apple AirPods Pro">
-    <h3>Apple AirPods Pro</h3>
-    <div class="price">₹19999</div>
-    <button>Add To Cart</button>
-</div>
+        </div>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=500" alt="OnePlus Buds 3">
-    <h3>OnePlus Buds 3</h3>
-    <div class="price">₹5499</div>
-    <button>Add To Cart</button>
-</div>
+        {% empty %}
 
-</div>
+        <h3>No Products Available</h3>
+
+        {% endfor %}
+
+    </div>
 
 </section>
 <!-- ================= OFFER ================= -->
