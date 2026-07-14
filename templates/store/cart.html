@@ -12,6 +12,7 @@
 <a href="{% url 'checkout' %}">
     <button>Proceed to Checkout</button>
 </a>
+    <a href="{% url 'remove_from_cart' item.id %}">
     <button>Remove</button>
 </a>
 
@@ -20,9 +21,9 @@
 
     <h2>Grand Total: ₹{{ total }}</h2>
 
-    <a href="/store/checkout/">
-        <button>Proceed to Checkout</button>
-    </a>
+    <a href="{% url 'checkout' %}">
+    <button>Proceed to Checkout</button>
+</a>
 
 {% else %}
     <h2>Your cart is empty 🥲</h2>
